@@ -1,0 +1,24 @@
+# Node / build artifacts
+node_modules
+dist
+dist-ssr
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Environment files
+.env
+.env.*
+!/backend/.env.example
+!/frontend/.env.example
+
+# Project-specific build outputs
+backend/dist
+frontend/dist
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+
