@@ -16,7 +16,9 @@ if (!MONGO_URI) {
   process.exit(1);
 }
 
-const asyncHandler = (handler: RequestHandler): RequestHandler => {
+const asyncHandler = (
+  handler: (req: Request, res: Response, next: NextFunction) => Promise<void> | void
+): RequestHandler => {
   return async (req, res, next) => {
     try {
       await handler(req, res, next);
